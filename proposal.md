@@ -7,7 +7,7 @@
 **Abstract Summary**: 
 
 ## Intro
-People who work with software libraries, whether in-house or open source, rely on the documentation of these libraries. The original author(s) were able to express the functionality of this library via code but this not necesarrily mean that a new onlooker can use it immediately. This where documentation, tutorials and blog posts come in.
+People who work with software libraries, whether in-house or open source, rely on the documentation of these libraries. The original author(s) were able to express the functionality of this library via code but this does not necesarrily mean that a new onlooker can use it immediately. This is where documentation, tutorials and blog posts come in.
 
 Being in the Haskell community, a common complaint that is often heard is that the documentation for libraries can range from poor to non-existent. This does not mean that _all_ libraries have poor documentation. In fact there are a few that have excellent resources and are written about a lot. What we will dicuss in this talk is the way we, as a community, can improve the poor documentation and dispell this complaint from our community.
 
@@ -15,15 +15,7 @@ Being in the Haskell community, a common complaint that is often heard is that t
 We will discuss in this section the levels of documentation that you will come across and how each one helps with a newcomers understanding to a library.
 
 ### Types as documentation
-Types can serve as documentation but only at opportune moments. They should not serve as documentation completely! This type of documentation will come in the form of well named types and also function naming. For example when we see:
-
-```haskell
-newtype Username = Username String
-
-subscribeUser :: Username -> Service -> IO ()
-```
-
-we can infer a lot about what is going on with this function by aliasing `String` to `Username` and knowing that we are subscribing that user to a `Service`.
+Types can serve as documentation but only at opportune moments. They should not serve as documentation completely! This type of documentation will come in the form of well named types and also function naming. We can infer a lot about what is going on with proper type and function names.
 
 ### Documenting Functions
 After useful type names, the next thing a user will look for is documentation for that specific function. This should at least have a one sentence description of what the function does. If the function is more involved then there should be more description given and, for bonus points, small examples of use.
